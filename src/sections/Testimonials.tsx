@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -97,7 +98,7 @@ const TestimonialCol = ({
         className="flex flex-col gap-6 pb-6"
       >
         {[...new Array(2)].fill(0).map((val, idx) => (
-          <>
+          <React.Fragment key={idx}>
             {data.map(({ text, imageSrc, name, username }, idx) => (
               <div className="card" key={`card-${idx}`}>
                 <div>{text}</div>
@@ -118,7 +119,7 @@ const TestimonialCol = ({
                 </div>
               </div>
             ))}
-          </>
+          </React.Fragment>
         ))}
       </motion.div>
     </div>
