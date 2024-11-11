@@ -128,7 +128,7 @@ const TestimonialCol = ({
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white">
+    <section id="testimonial" className="bg-white scroll-mt-[130px]">
       <div className="container">
         <div className="flex justify-center">
           <div className="tag">Testimonial</div>

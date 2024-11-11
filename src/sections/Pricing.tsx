@@ -7,27 +7,27 @@ const pricingTiers = [
   {
     title: "Free",
     monthlyPrice: 0,
-    buttonText: "Get started for free",
+    buttonText: "Join waitlist for free",
     popular: false,
     inverse: false,
     features: [
       "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
+      "2x weekly scans and fixes",
+      "Single Project",
       "Integrations",
       "Basic support",
     ],
   },
   {
     title: "Pro",
-    monthlyPrice: 9,
-    buttonText: "Sign up now",
+    monthlyPrice: 299,
+    buttonText: "Join waitlist now",
     popular: true,
     inverse: true,
     features: [
       "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
+      "Upto 5 projects",
+      "Daily Scans and Fixes",
       "Integrations",
       "Priority support",
       "Advanced support",
@@ -36,14 +36,14 @@ const pricingTiers = [
   },
   {
     title: "Business",
-    monthlyPrice: 19,
-    buttonText: "Sign up now",
+    monthlyPrice: null,
+    buttonText: "Contact now",
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
+      "Unlimited project members",
+      "Unlmited projects",
+      "Trigger scans and fixes on merge",
       "Integrations",
       "Dedicated account manager",
       "Custom fields",
@@ -57,7 +57,7 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className="bg-white">
+    <section id="pricing" className="bg-white scroll-mt-[40px]">
       <div className="container py-24">
         <div className="section-heading">
           <h2 className="section-title">Pricing</h2>
@@ -110,14 +110,16 @@ export const Pricing = () => {
                       </div>
                     )}
                   </div>
-                  <div className="flex items-baseline gap-1 mt-[30px">
-                    <span className="text-4xl font-bold tracking-tighter leading-none">
-                      ${monthlyPrice}
-                    </span>
-                    <span className="tracking-tight font-bold text-black/50">
-                      /month
-                    </span>
-                  </div>
+                  {monthlyPrice !== null && (
+                    <div className="flex items-baseline gap-1 mt-[30px">
+                      <span className="text-4xl font-bold tracking-tighter leading-none">
+                        ${monthlyPrice}
+                      </span>
+                      <span className="tracking-tight font-bold text-black/50">
+                        /month
+                      </span>
+                    </div>
+                  )}
                   <button
                     className={twMerge(
                       "btn btn-primary w-full mt-[30px]",

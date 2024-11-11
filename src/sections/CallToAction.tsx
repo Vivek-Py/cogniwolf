@@ -16,15 +16,16 @@ export const CallToAction = () => {
 
   return (
     <section
+      id="contact"
       ref={footerRef}
-      className="bg-gradient-to-b from-white to-[#d2dcff] py-24"
+      className="bg-gradient-to-b from-white to-[#d2dcff] py-24 scroll-mt-[140px]"
     >
       <div className="container">
         <div className="section-heading relative">
           <h2 className="section-title">Sign up for free today</h2>
           <p className="section-description mt-5">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress and motivate your efforts.
+            Achieve more with CogniWolf, an automation designed to track your
+            code issues, and resolve them.
           </p>
           <motion.img
             src={starImage.src}
@@ -47,11 +48,11 @@ export const CallToAction = () => {
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Get for free</button>
-          <button className="btn btn-text gap-1">
+          <button className="btn btn-primary">Join waitlist for free</button>
+          {/* <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
